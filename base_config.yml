@@ -1,0 +1,7 @@
+ftp:
+  host: foo
+  user: bar
+  pass: baz
+  directory: 'completed'
+temp_dir: '/tmp'
+download_dir: '/home/pate/completed'
