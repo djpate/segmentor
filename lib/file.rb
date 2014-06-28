@@ -65,9 +65,10 @@ class FtpFile
     clear_part_files
     THREAD_COUNT.times do |i|
       from_packet = i * packet_size
-      to_packet   = from_packet + packet_size - 1
+      to_packet   = i < (THREAD_COUNT-1) ? from_packet + packet_size - 1 : ""
       @threads << Thread.new {
         curl(@file, range(from_packet, to_packet), i)
+        completed_part
       }
     end
     @threads << watcher
