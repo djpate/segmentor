@@ -26,8 +26,8 @@ We use Curl and the range option to get the right chunk and cat to merge everyth
 
 ## Requirements
 
-* ruby
-* linux/max (tested only on linux but should work on mac)
+* Ruby
+* Linux/Max (tested only on linux but should work on mac)
 * ruby-progressbar (gem)
 * net-ftp-list (gem)
 * curl (system)
